@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="drawing__container">
+            <div class="header">
+                <div class="title">Drawing App</div>
+            </div>
+            <div class="color__container">
+                <div class="fav__color">
+                    <div class="color__circle active" data-color="coral" onclick="selectColor(this)"></div>
+                    <div class="color__circle" data-color="rgb(226, 128, 144)" onclick="selectColor(this)"></div>
+                    <div class="color__circle" data-color="crimson" onclick="selectColor(this)"></div>
+                    <div class="color__circle" data-color="cadetblue" onclick="selectColor(this)"></div>
+                    <div class="color__circle" data-color="black" onclick="selectColor(this)"></div>
+                    <div class="color__circle" data-color="#f3e73e" onclick="selectColor(this)"></div>
+                </div>
+                <div class="flex">
+                    <div class="color__picker">
+                        <label for="favcolor">Color Picker</label>
+                        <input type="color" name="favcolor" id="favcolor" value="#ff0000" onchange="colorPicker(this);">
+                    </div>
+                    <div class="pen__size">
+                        <label for="pen-size">Size</label>
+                        <input type="range" name="pen-size" id="pen-size" value="2" step="2" max="20" min="2" onchange="sizeChange(this.value);">
+                    </div>
+                </div>
+            </div>
+            <div class="draw__board">
+                <canvas class="canvas"></canvas>
+            </div>
+            <footer>
+                <a href="" download="my_painting.png" class="download"><i class="fas fa-download"></i> Download</a>
+                <div class="clear"><i class="fas fa-broom"></i> Clear</div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+    
+</body>
+</html>
